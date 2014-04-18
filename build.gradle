@@ -1,0 +1,48 @@
+buildscript {
+	repositories {
+		maven {
+			url "http://repo.spring.io/libs-snapshot"
+		}
+		mavenLocal()
+	}
+
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:0.5.0.M4")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+repositories {
+	mavenCentral()
+	maven {
+		url "http://repo.spring.io/libs-snapshot"
+	}
+}
+
+dependencies {
+	compile("org.springframework.data:spring-data-mongodb:1.3.2.RELEASE")
+	compile("org.springframework.boot:spring-boot-starter-web:0.5.0.M4")
+	compile("com.fasterxml.jackson.core:jackson-databind")
+	compile("org.projectreactor:reactor-spring:1.0.0.M1")
+	testCompile("junit:junit:4.11")
+}
+
+jar {
+	baseName 'm2m-da_starter'
+	version = '0.1.0'
+	manifest {
+		attributes (
+			"Manifest-Version": "1.0",
+			"Created-By": "Gowri Gary Shankar",
+			"Main-Class": "com.prodapt.m2m.da.Application"
+		)
+	}
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '1.8'
+}
