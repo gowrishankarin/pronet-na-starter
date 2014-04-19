@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.prodapt.m2m.da.core.ContentInstanceInfo;
 import com.prodapt.m2m.da.events.Publisher;
-import com.prodapt.m2m.rest.domain.Command;
 import com.prodapt.m2m.rest.domain.ContentInstance;
 
 @Controller

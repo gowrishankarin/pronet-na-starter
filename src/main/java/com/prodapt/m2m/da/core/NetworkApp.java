@@ -9,29 +9,31 @@ package com.prodapt.m2m.da.core;
 import com.prodapt.m2m.rest.domain.Application;
 import com.prodapt.m2m.rest.domain.Command;
 import com.prodapt.m2m.rest.domain.Container;
-import com.prodapt.m2m.rest.domain.ContentInstance;
 
 
-public class NetworkSimulator {
+public class NetworkApp {
 
-
-    
-
-	public void createApplication() {
+	public Application createApplication() {
 
 		Application newApp = new Application();
+		
+		return newApp;
 
 	}
 
-	public void createDevice() {
+	public Container createDevice() {
 
 		Container newContainer = new Container();
+		
+		return newContainer;
 
 	}
 
-	public void sendDeviceCommand() {
+	public Command sendDeviceCommand() {
 
 		Command command = new Command();
+		
+		return command;
 
 	}
 }
