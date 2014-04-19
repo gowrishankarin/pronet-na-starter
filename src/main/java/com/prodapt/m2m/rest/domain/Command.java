@@ -50,39 +50,4 @@ public class Command {
 	public int getCommand() {
 		return command;
 	}
-/*
-	public CommandDetails toCommandDetails(String commandId) {
-		
-		CommandDetails details = new CommandDetails();
-
-		details.setCommandId(commandId);
-		details.setCreationTime(creationTime);
-		details.setLastModifiedTime(lastModifiedTime);
-		details.setCommandType(commandType);
-		details.setExecEnable(execEnable);
-		details.setDescription(description);
-		details.setExecInstancesReference(execInstancesReference);
-		details.setSubscriptionsReference(subscriptionsReference);
-		details.setCommand(command);
-
-		return details;
-
-	}
-
-	public static Command fromCommandDetails(
-		CommandDetails commandDetails) {
-		
-		Command command = new Command();
-
-		command.commandId = commandDetails.getCommandId();
-		command.creationTime = commandDetails.getCreationTime();
-		command.lastModifiedTime = commandDetails.getLastModifiedTime();
-		command.commandType = commandDetails.getCommandType();
-		command.execEnable = commandDetails.isExecEnable();
-		command.description = commandDetails.getDescription();
-		command.execInstancesReference = commandDetails.getExecInstancesReference();
-		command.subscriptionsReference = commandDetails.getSubscriptionsReference();
-		command.command = commandDetails.getCommand();
-		return command;
-	}*/
 }
