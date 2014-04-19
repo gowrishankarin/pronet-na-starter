@@ -8,24 +8,24 @@ package com.prodapt.m2m.da.core;
 
 import java.util.Date;
 
-import com.prodapt.m2m.rest.domain.Command;
+import com.prodapt.m2m.rest.domain.ContentInstance;
 
-public class CommandInfo {
+public class ContentInstanceInfo {
     
-    private Command command;
+    private ContentInstance contentInstance;
     private String appId;
     private String deviceId;
     private Date receivedTime;
     
-    public CommandInfo(String appId, String deviceId, Command command) {
+    public ContentInstanceInfo(String appId, String deviceId, ContentInstance contentInstance) {
     	this.appId = appId;
     	this.deviceId = deviceId;
-    	this.command = command;
+    	this.contentInstance = contentInstance;
     	this.receivedTime = new Date();
     }
     
-	public Command getCommand() {
-		return command;
+	public ContentInstance getContentInstance() {
+		return contentInstance;
 	}
 	public String getAppId() {
 		return appId;

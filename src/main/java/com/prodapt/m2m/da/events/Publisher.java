@@ -10,7 +10,7 @@ package com.prodapt.m2m.da.events;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.prodapt.m2m.da.core.CommandInfo;
+import com.prodapt.m2m.da.core.ContentInstanceInfo;
 
 import reactor.core.Reactor;
 import reactor.event.Event;
@@ -21,8 +21,8 @@ public class Publisher {
 	@Autowired
 	Reactor reactor;
 
-	public void commandReceivedEvent(CommandInfo commandInfo) throws InterruptedException {
+	public void contentInstanceReceivedEvent(ContentInstanceInfo contentInstanceInfo) throws InterruptedException {
 
-		reactor.notify("events", Event.wrap(commandInfo));
+		reactor.notify("events", Event.wrap(contentInstanceInfo));
 	}
 }

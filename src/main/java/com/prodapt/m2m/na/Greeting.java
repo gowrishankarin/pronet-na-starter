@@ -1,4 +1,4 @@
-package com.prodapt.m2m.da;
+package com.prodapt.m2m.na;
 
 public class Greeting {
 

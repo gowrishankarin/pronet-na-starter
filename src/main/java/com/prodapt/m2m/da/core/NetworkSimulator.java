@@ -7,11 +7,12 @@
 package com.prodapt.m2m.da.core;
 
 import com.prodapt.m2m.rest.domain.Application;
+import com.prodapt.m2m.rest.domain.Command;
 import com.prodapt.m2m.rest.domain.Container;
 import com.prodapt.m2m.rest.domain.ContentInstance;
 
 
-public class DeviceSimulator {
+public class NetworkSimulator {
 
 
     
@@ -28,9 +29,9 @@ public class DeviceSimulator {
 
 	}
 
-	public void sendDeviceParameters() {
+	public void sendDeviceCommand() {
 
-		ContentInstance contentInstance = new ContentInstance();
+		Command command = new Command();
 
 	}
 }
