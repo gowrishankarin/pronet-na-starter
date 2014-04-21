@@ -4,7 +4,7 @@
 * @Last Modified by:   Gowri Gary Shankar
 * @Last Modified time: 2014-04-19 12:10:42
 */
-package com.prodapt.m2m.da.core;
+package com.prodapt.m2m.na.core;
 
 import java.util.Date;
 

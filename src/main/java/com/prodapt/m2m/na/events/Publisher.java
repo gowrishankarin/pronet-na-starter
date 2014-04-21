@@ -5,12 +5,12 @@
 * @Last Modified time: 2014-04-19 09:36:04
 */
 
-package com.prodapt.m2m.da.events;
+package com.prodapt.m2m.na.events;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.prodapt.m2m.da.core.ContentInstanceInfo;
+import com.prodapt.m2m.na.core.ContentInstanceInfo;
 
 import reactor.core.Reactor;
 import reactor.event.Event;

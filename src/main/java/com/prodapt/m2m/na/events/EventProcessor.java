@@ -5,7 +5,7 @@
 * @Last Modified time: 2014-04-19 09:33:54
 */
 
-package com.prodapt.m2m.da.events;
+package com.prodapt.m2m.na.events;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

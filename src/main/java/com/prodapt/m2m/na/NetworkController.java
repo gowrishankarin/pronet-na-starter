@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.prodapt.m2m.da.core.ContentInstanceInfo;
-import com.prodapt.m2m.da.events.Publisher;
+import com.prodapt.m2m.na.core.ContentInstanceInfo;
+import com.prodapt.m2m.na.events.Publisher;
 import com.prodapt.m2m.rest.domain.ContentInstance;
 
 @Controller

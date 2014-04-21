@@ -15,8 +15,8 @@ import reactor.core.Environment;
 import reactor.core.Reactor;
 import reactor.core.spec.Reactors;
 
-import com.prodapt.m2m.da.events.Publisher;
-import com.prodapt.m2m.da.events.Receiver;
+import com.prodapt.m2m.na.events.Publisher;
+import com.prodapt.m2m.na.events.Receiver;
 
 @Configuration
 @ComponentScan({
