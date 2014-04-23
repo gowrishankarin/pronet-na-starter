@@ -50,4 +50,8 @@ public class Command {
 	public int getCommand() {
 		return command;
 	}
+
+	public Command(int command) {
+		this.command = command;
+	}
 }

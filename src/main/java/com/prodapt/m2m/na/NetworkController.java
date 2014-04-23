@@ -27,7 +27,8 @@ public class NetworkController {
 		@RequestBody ContentInstance contentInstance) {
 
 		try {
-			ContentInstanceInfo contentInstanceInfo = new ContentInstanceInfo(appId, deviceId, contentInstance);
+			ContentInstanceInfo contentInstanceInfo 
+				= new ContentInstanceInfo(appId, deviceId, contentInstance);
 			
 			publisher.contentInstanceReceivedEvent(contentInstanceInfo);
 		} catch (InterruptedException e) {
