@@ -14,7 +14,6 @@ import org.springframework.web.client.RestTemplate;
 
 import com.prodapt.m2m.rest.domain.Application;
 import com.prodapt.m2m.rest.domain.Command;
-import com.prodapt.m2m.rest.domain.Container;
 
 
 @Component
@@ -24,7 +23,7 @@ public class NetworkApp {
     RestTemplate restTemplate;
 
 	private String appId;
-	private String deviceId;
+	//private String deviceId;
 	private String m2mPoC;
 
 	public Application createApplication() {
@@ -34,8 +33,19 @@ public class NetworkApp {
 		return newApp;
 
 	}
-
-	public Container createDevice() {
+	
+	public NetworkApp(String appId, String m2mPoC) {
+		this.appId = appId;
+		this.m2mPoC = m2mPoC;
+	}
+	
+	/*public String getDeviceId() {
+		return deviceId;
+	}*/
+	
+	
+/*
+	public Container createContainer() {
 
 		Container device = new Container();
 		
@@ -57,8 +67,8 @@ public class NetworkApp {
 		return newDevice;
 
 	}
-
-	public Command sendDeviceCommand() {
+*/
+	public Command sendDeviceCommand(String deviceId) {
 
 		Command command = new Command(1927);
 
@@ -80,4 +90,6 @@ public class NetworkApp {
 		return newCommand;
 
 	}
+
+	
 }
