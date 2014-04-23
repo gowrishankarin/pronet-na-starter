@@ -22,7 +22,8 @@ public class NetworkController {
 	@Autowired
 	private Publisher publisher;
 
-	private NetworkApp networkApp = null;
+	@Autowired
+	private NetworkApp networkApp;
 
 	@RequestMapping(value = {"/pronet-na-starter/applications/{appId}/containers/{deviceId}/contentinstances"},
 		method = RequestMethod.POST)
@@ -50,8 +51,7 @@ public class NetworkController {
 		@RequestParam(value = "m2mPoC", required=true) String m2mPoC,
 		@RequestParam(value = "appId", required=true) String appId) {
 
-		if(null == networkApp) {
-			networkApp = new NetworkApp();
+		if(!networkApp.isCreated()) {
 			networkApp.init(appId, m2mPoC);
 			return new ResponseEntity<String> (
 				"Network Application Configured Successfully", HttpStatus.OK);
