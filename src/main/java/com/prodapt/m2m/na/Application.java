@@ -20,8 +20,9 @@ import com.prodapt.m2m.na.events.Receiver;
 
 @Configuration
 @ComponentScan({
-    "package com.prodapt.m2m.da",
-    "package com.prodapt.m2m.da.core"
+    "com.prodapt.m2m.na",
+    "com.prodapt.m2m.na.core",
+    "com.prodapt.m2m.na.events"
 })
 @EnableAutoConfiguration
 public class Application implements CommandLineRunner{
@@ -62,6 +63,6 @@ public class Application implements CommandLineRunner{
 
     @Override
     public void run(String... args) throws Exception {
-        reactor.on($("commands"), receiver);
+        reactor.on($("events"), receiver);
     }
 }

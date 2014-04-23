@@ -7,7 +7,6 @@
 
 package com.prodapt.m2m.na.events;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.prodapt.m2m.na.core.ContentInstanceInfo;
@@ -19,9 +18,6 @@ import reactor.function.Consumer;
 @Service
 public class Receiver implements Consumer<Event<ContentInstanceInfo>> {
 
-	
-	@Autowired
-	EventProcessor eventProcessor;
 	
 	public void accept(Event<ContentInstanceInfo> ev) {
 		

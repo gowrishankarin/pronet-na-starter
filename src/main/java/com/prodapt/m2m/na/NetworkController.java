@@ -22,7 +22,7 @@ public class NetworkController {
 	@Autowired
 	private Publisher publisher;
 
-	private NetworkApp networkApp;
+	private NetworkApp networkApp = null;
 
 	@RequestMapping(value = {"/pronet-na-starter/applications/{appId}/containers/{deviceId}/contentinstances"},
 		method = RequestMethod.POST)
@@ -51,7 +51,8 @@ public class NetworkController {
 		@RequestParam(value = "appId", required=true) String appId) {
 
 		if(null == networkApp) {
-			networkApp = new NetworkApp(appId, m2mPoC);
+			networkApp = new NetworkApp();
+			networkApp.init(appId, m2mPoC);
 			return new ResponseEntity<String> (
 				"Network Application Configured Successfully", HttpStatus.OK);
 		} else {
@@ -66,19 +67,19 @@ public class NetworkController {
 		@PathVariable String deviceId,
 		@RequestParam(value = "command", required=true) String commandId) {
 
-		if(networkApp != null) {
+		if(networkApp != null && true == networkApp.isCreated()) {
 
 			Command command = networkApp.sendDeviceCommand(deviceId);
 
 			System.out.println("Device Id: " + deviceId + " Command Reference: " + 
 				command.getCommand());
 			
-			return new ResponseEntity<String> ("Device Id: " + deviceId + " Command Reference: " + 
-					command.getCommand(), HttpStatus.OK);
+			return new ResponseEntity<String> ("Device Id: " + deviceId + 
+				" Command Reference: " + command.getCommand(), HttpStatus.OK);
 
 		} else {
 
-			if(networkApp == null) {
+			if(null == networkApp) {
 
 				return new ResponseEntity<String> (
 					"Add Device Forbidden, Configure NA Simulator", 

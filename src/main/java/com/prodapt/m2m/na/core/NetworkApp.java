@@ -23,26 +23,32 @@ public class NetworkApp {
     RestTemplate restTemplate;
 
 	private String appId;
-	//private String deviceId;
+	private boolean isCreated;
 	private String m2mPoC;
 
 	public Application createApplication() {
-
 		Application newApp = new Application();
-		
 		return newApp;
+	}
 
+	public NetworkApp() {
+		this.isCreated = false;
 	}
 	
-	public NetworkApp(String appId, String m2mPoC) {
+	public void init(String appId, String m2mPoC) {
 		this.appId = appId;
 		this.m2mPoC = m2mPoC;
+		this.isCreated = true;
 	}
 	
-	/*public String getDeviceId() {
-		return deviceId;
-	}*/
+	public boolean isCreated() {
+		return isCreated;
+	}
 	
+	public String getAppId() {
+		return appId;
+	}
+
 	
 /*
 	public Container createContainer() {

@@ -32,13 +32,13 @@ dependencies {
 }
 
 jar {
-	baseName 'm2m-da_starter'
+	baseName 'm2m-na_starter'
 	version = '0.1.0'
 	manifest {
 		attributes (
 			"Manifest-Version": "1.0",
 			"Created-By": "Gowri Gary Shankar",
-			"Main-Class": "com.prodapt.m2m.da.Application"
+			"Main-Class": "com.prodapt.m2m.na.Application"
 		)
 	}
 }
