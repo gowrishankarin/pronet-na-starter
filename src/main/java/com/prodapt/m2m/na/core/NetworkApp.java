@@ -76,7 +76,8 @@ public class NetworkApp {
 */
 	public Command sendDeviceCommand(String deviceId) {
 
-		Command command = new Command(1927);
+		Command command = new Command();
+		command.setCommand(1927);
 
 		HttpEntity<Command> commandEntity
 			= new HttpEntity<Command> (command);
